@@ -11,4 +11,4 @@ const createJwt = (user) =>{
     return jwtSimple.encode(payload, config.privatekey);
 }
 
-module.exports = createJwt;
+module.exports = {createJwt}

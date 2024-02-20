@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended:true}));
 
 // Routes
-//app.use('/api',require('./routes/routesHandler'))
+app.use('/api',require('./routes/routesHandler'))
 
 // Configuration
 app.set('port', config.app.port);

@@ -1,10 +1,10 @@
-const {router}= require('express').Router();
+const {Router}= require('express')
 const {check}=require('express-validator')
 const { userGet,userPost, userDelete, userPut } = require('../controllers/users')
 const { validateResult} = require('../middlewares/finalValidation')
 const { validateJwt } = require('../middlewares/validateJwt')
 const { haveRole } = require('../middlewares/validateRole')
-
+const router=Router()
 
 router.get('/',[
     validateJwt,
