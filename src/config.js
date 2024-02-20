@@ -11,5 +11,6 @@ module.exports = {
         databaseName: process.env.MYSQL_DB || 'parking',
         database : process.env.DATABASE || 'mysql'
     },
-    privatekey :process.env.PRIVATEKEY
+    privatekey :process.env.PRIVATEKEY,
+    mongoHost : process.env.MONGODB_HOST || 'mongodb://127.0.0.1:27017/parking'
 }

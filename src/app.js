@@ -6,7 +6,7 @@ const app = express();
 const {makeConection} = require('./database/db')
 makeConection({alter:false})
 
-const{createMongoDb } = require('./database/mongoDb')
+const{createMongoDb} = require('./database/mongoDb')
 createMongoDb()
 
 // Middlewares

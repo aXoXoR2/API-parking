@@ -1,9 +1,10 @@
 const mongoose=require('mongoose')
 const {Logs} = require('../models/logs.js')
+const config = require('../config.js')
 
 createMongoDb=async()=>{
     try {
-        await mongoose.connect('mongodb://127.0.0.1:27017/ParkingLogs')
+        await mongoose.connect(config.mongoHost)
         console.log('Connection successfullly maked with logs database.');
         
     } catch (error) {
@@ -11,4 +12,4 @@ createMongoDb=async()=>{
         throw new Error('Logs database connection error.')
     }
 }      
-module.exports = createMongoDb;
+module.exports = {createMongoDb}

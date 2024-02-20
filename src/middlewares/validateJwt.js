@@ -5,7 +5,7 @@ const config = require('../config')
 
 
 const validateJwt=async(req=request,res=response,next)=>{
-    const token = req.header('x-token')
+    const token = req.header('token')
     if(!token){
         return res.status(400).json({
             msg:"The token doesnt exist."
