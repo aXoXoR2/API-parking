@@ -19,7 +19,7 @@ const User=db.define(
             allowNull:false,
             unique:true
         },
-        password:{
+        password_encrypted:{
             type:DataTypes.STRING,
             allowNull:false
         },
@@ -44,7 +44,7 @@ const User=db.define(
                     {id:uuidv4(),
                     name:"Andry",
                     email:"andryrosquet@gmail.com",
-                    password:"$2a$10$9AtfWOusScIL8xxXwfjiu.3jYQ2xWNuzrcDenLbmLPXlpjbHbgXbG",
+                    password_encrypted:"$2a$10$9AtfWOusScIL8xxXwfjiu.3jYQ2xWNuzrcDenLbmLPXlpjbHbgXbG",
                     phone:"54782440",
                     role:"ADMIN"
                     ,status:true}) 

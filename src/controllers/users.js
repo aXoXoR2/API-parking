@@ -24,14 +24,18 @@ const userPost=async(req=request,res=response)=>{
                 msg:'This email already exist.'
             })
         }
-        const password_encrypted = bcryptjs.hashSync(password, bcryptjs.genSaltSync())
+        const password_encrypted= bcryptjs.hashSync(password, bcryptjs.genSaltSync())
+        console.log(password_encrypted)
         const user= new User({id:uuidv4(), name, email, password_encrypted, phone, role, status:true})
+        console.log(user)
         await user.save()
+        console.log("ENTER OK")
         res.status(200).json({
             user
         })
     } catch (error) {
-        return res.status(400).json({
+        console.log("ENTER Error")
+        return res.status(400).json({      
             error:error
         })    
     }

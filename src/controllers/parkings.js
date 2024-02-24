@@ -34,7 +34,9 @@ const parkingGet= async(req=request,res=response)=>{
 }
 const parkingPost=async(req=request,res=response)=>{
     try {
+        const {description}=req.body
         const parking= new Parking({description})
+        console.log(parking)
         await parking.save()
         res.status(200).json({
             parking

@@ -18,7 +18,7 @@ const login=async(req,res=response)=>{
                 error:'Status error.'
             })
         }
-        const matchPassword=bcryptjs.compareSync(password,user.password)
+        const matchPassword=bcryptjs.compareSync(password,user.password_encrypted)
         if(!matchPassword){
             return res.json({
                 error:"Password incorret."

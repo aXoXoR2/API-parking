@@ -1,35 +1,35 @@
 const { response, request } = require('express')
-const jwt= require('jsonwebtoken')
-const {User}=require('../models/users')
+const jwt= require('jwt-simple');
+const moment = require('moment');
+const {User}=require('../models/users');
 const config = require('../config')
 
 
 const validateJwt=async(req=request,res=response,next)=>{
     const token = req.header('token')
+    
     if(!token){
         return res.status(400).json({
             msg:"Non recieve a token."
         })
     }
+    let payload = {}
     try {
-        const {uuid}=jwt.verify(token, config.privatekey)
-        const user=await User.findOne({where:{id:uuid}})
-        if(!user){
+        payload = jwt.decode(token, config.privatekey);
+        if(payload.expiredAt < moment().unix())
+        {
             return res.status(400).json({
-                msg:"Invalid token."
+                msg:"Expired Token."
             })
         }
-        if(!user.status){
-            return res.status(401).json({
-                msg:"Status error."
-            })
-        }
-        req.user=user
-      
-        next()
+        const uuid= payload.userid;
+        const user=await User.findOne({where:{id:uuid}})
+
+        req.user = user;
+        next();
     } catch (error) {
         return res.status(400).json({
-            msg:"Token expired."
+            msg:"Invalid Token."
         })
     }
 }

@@ -107,8 +107,8 @@ const reservePost=async(req=request,res=response)=>{
 }
 const reservePut=async(req=request,res=response)=>{
     try {
-        const {id_parking,time_init,time_end}=req.body
-        const {vehicle_registration}=req.query
+        const {id_parking,time_init,time_end}=req.query
+        const {vehicle_registration}=req.body
         const reserved=await Reserve.findOne({where:{
             id_parking,
             time_init,

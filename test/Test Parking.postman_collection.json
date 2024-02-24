@@ -1,0 +1,536 @@
+{
+	"info": {
+		"_postman_id": "db341805-4b76-482c-9d86-f0a4aa193c7a",
+		"name": "Test Parking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21621947"
+	},
+	"item": [
+		{
+			"name": "http://localhost:4000/api/authentication",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "andryrosquet@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "abc123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/authentication",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"authentication"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/api/user",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyaWQiOiJmMjVmMjFmMC0zZDQ1LTQwZTUtOTIwYS1iZDgxMzM0OTZhNzciLCJjcmVhdGVkQXQiOjE3MDg4MDM0NTAsImV4cGlyZWRBdCI6MTcwODgyMTQ1MH0._G6BLSVCcStQjO2zQrGV-ovmdDG_BIZbaBrv7sIWv8c",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:4000/api/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/api/logs",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyaWQiOiJmMjVmMjFmMC0zZDQ1LTQwZTUtOTIwYS1iZDgxMzM0OTZhNzciLCJjcmVhdGVkQXQiOjE3MDg4MDM0NTAsImV4cGlyZWRBdCI6MTcwODgyMTQ1MH0._G6BLSVCcStQjO2zQrGV-ovmdDG_BIZbaBrv7sIWv8c",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/logs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"logs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/api/parking",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyaWQiOiJmMjVmMjFmMC0zZDQ1LTQwZTUtOTIwYS1iZDgxMzM0OTZhNzciLCJjcmVhdGVkQXQiOjE3MDg4MDM0NTAsImV4cGlyZWRBdCI6MTcwODgyMTQ1MH0._G6BLSVCcStQjO2zQrGV-ovmdDG_BIZbaBrv7sIWv8c",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:4000/api/parking",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"parking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/api/reserve",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyaWQiOiJmMjVmMjFmMC0zZDQ1LTQwZTUtOTIwYS1iZDgxMzM0OTZhNzciLCJjcmVhdGVkQXQiOjE3MDg4MDM0NTAsImV4cGlyZWRBdCI6MTcwODgyMTQ1MH0._G6BLSVCcStQjO2zQrGV-ovmdDG_BIZbaBrv7sIWv8c",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:4000/api/reserve",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"reserve"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/api/parking",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyaWQiOiJmMjVmMjFmMC0zZDQ1LTQwZTUtOTIwYS1iZDgxMzM0OTZhNzciLCJjcmVhdGVkQXQiOjE3MDg4MDM0NTAsImV4cGlyZWRBdCI6MTcwODgyMTQ1MH0._G6BLSVCcStQjO2zQrGV-ovmdDG_BIZbaBrv7sIWv8c",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "description",
+							"value": "Un parkeo lindo de Henry",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/parking",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"parking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/api/user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyaWQiOiJmMjVmMjFmMC0zZDQ1LTQwZTUtOTIwYS1iZDgxMzM0OTZhNzciLCJjcmVhdGVkQXQiOjE3MDg4MDM0NTAsImV4cGlyZWRBdCI6MTcwODgyMTQ1MH0._G6BLSVCcStQjO2zQrGV-ovmdDG_BIZbaBrv7sIWv8c",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "phone",
+							"value": "11111111",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "abcd1234",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "EMPLOY",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Ovidio",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "ovidio@gmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/api/reserve",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyaWQiOiJmMjVmMjFmMC0zZDQ1LTQwZTUtOTIwYS1iZDgxMzM0OTZhNzciLCJjcmVhdGVkQXQiOjE3MDg4MDM0NTAsImV4cGlyZWRBdCI6MTcwODgyMTQ1MH0._G6BLSVCcStQjO2zQrGV-ovmdDG_BIZbaBrv7sIWv8c",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id_parking",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "owner",
+							"value": "5998adf2-28cd-446e-8d5f-cc1496bead62",
+							"type": "text"
+						},
+						{
+							"key": "vehicle_registration",
+							"value": "ssssssss",
+							"type": "text"
+						},
+						{
+							"key": "time_init",
+							"value": "2024-08-07T16:11:00.000Z",
+							"type": "text"
+						},
+						{
+							"key": "time_end",
+							"value": "2025-03-03T20:11:00.000Z",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/reserve",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"reserve"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/api/user/5998adf2-28cd-446e-8d5f-cc1496bead62",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyaWQiOiJmMjVmMjFmMC0zZDQ1LTQwZTUtOTIwYS1iZDgxMzM0OTZhNzciLCJjcmVhdGVkQXQiOjE3MDg4MDM0NTAsImV4cGlyZWRBdCI6MTcwODgyMTQ1MH0._G6BLSVCcStQjO2zQrGV-ovmdDG_BIZbaBrv7sIWv8c",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Ovidio",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "22222222",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "CLIENT",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/user/5998adf2-28cd-446e-8d5f-cc1496bead62",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"user",
+						"5998adf2-28cd-446e-8d5f-cc1496bead62"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/api/parking/1",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyaWQiOiJmMjVmMjFmMC0zZDQ1LTQwZTUtOTIwYS1iZDgxMzM0OTZhNzciLCJjcmVhdGVkQXQiOjE3MDg4MDM0NTAsImV4cGlyZWRBdCI6MTcwODgyMTQ1MH0._G6BLSVCcStQjO2zQrGV-ovmdDG_BIZbaBrv7sIWv8c",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "description",
+							"value": "Ya el parking no es de herny es de ovidio",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/parking/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"parking",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/api/reserve?id_parking=1&time_init=2024-08-07T16:11:00.000Z&time_end=2025-03-03T20:11:00.000Z",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyaWQiOiJmMjVmMjFmMC0zZDQ1LTQwZTUtOTIwYS1iZDgxMzM0OTZhNzciLCJjcmVhdGVkQXQiOjE3MDg4MDM0NTAsImV4cGlyZWRBdCI6MTcwODgyMTQ1MH0._G6BLSVCcStQjO2zQrGV-ovmdDG_BIZbaBrv7sIWv8c",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "vehicle_registration",
+							"value": "dddddddd",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/reserve?id_parking=1&time_init=2024-08-07T16:11:00.000Z&time_end=2025-03-03T20:11:00.000Z",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"reserve"
+					],
+					"query": [
+						{
+							"key": "id_parking",
+							"value": "1"
+						},
+						{
+							"key": "time_init",
+							"value": "2024-08-07T16:11:00.000Z"
+						},
+						{
+							"key": "time_end",
+							"value": "2025-03-03T20:11:00.000Z"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/api/user/5998adf2-28cd-446e-8d5f-cc1496bead62",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyaWQiOiJmMjVmMjFmMC0zZDQ1LTQwZTUtOTIwYS1iZDgxMzM0OTZhNzciLCJjcmVhdGVkQXQiOjE3MDg4MDM0NTAsImV4cGlyZWRBdCI6MTcwODgyMTQ1MH0._G6BLSVCcStQjO2zQrGV-ovmdDG_BIZbaBrv7sIWv8c",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:4000/api/user/5998adf2-28cd-446e-8d5f-cc1496bead62",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"user",
+						"5998adf2-28cd-446e-8d5f-cc1496bead62"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/api/parking/2",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyaWQiOiJmMjVmMjFmMC0zZDQ1LTQwZTUtOTIwYS1iZDgxMzM0OTZhNzciLCJjcmVhdGVkQXQiOjE3MDg4MDM0NTAsImV4cGlyZWRBdCI6MTcwODgyMTQ1MH0._G6BLSVCcStQjO2zQrGV-ovmdDG_BIZbaBrv7sIWv8c",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:4000/api/parking/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"parking",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/api/reserve?id_parking=1&time_init=2024-08-07T16:11:00.000Z&time_end=2025-03-03T20:11:00.000Z",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyaWQiOiJmMjVmMjFmMC0zZDQ1LTQwZTUtOTIwYS1iZDgxMzM0OTZhNzciLCJjcmVhdGVkQXQiOjE3MDg4MDM0NTAsImV4cGlyZWRBdCI6MTcwODgyMTQ1MH0._G6BLSVCcStQjO2zQrGV-ovmdDG_BIZbaBrv7sIWv8c",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/reserve?id_parking=1&time_init=2024-08-07T16:11:00.000Z&time_end=2025-03-03T20:11:00.000Z",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"reserve"
+					],
+					"query": [
+						{
+							"key": "id_parking",
+							"value": "1"
+						},
+						{
+							"key": "time_init",
+							"value": "2024-08-07T16:11:00.000Z"
+						},
+						{
+							"key": "time_end",
+							"value": "2025-03-03T20:11:00.000Z"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

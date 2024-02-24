@@ -1,5 +1,6 @@
 const express = require('express');
 const config = require('./config');
+const bodyParser = require('body-parser')
 const app = express();
 
 // DataBase
@@ -11,7 +12,7 @@ createMongoDb()
 
 // Middlewares
 app.use(express.json());
-app.use(express.urlencoded({ extended:true}));
+app.use(bodyParser.urlencoded({ extended:true}));
 
 // Routes
 app.use('/api',require('./routes/routesHandler'))
