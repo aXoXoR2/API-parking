@@ -9,8 +9,8 @@ const validateJwt=async(req=request,res=response,next)=>{
     const token = req.header('token')
     
     if(!token){
-        return res.status(400).json({
-            msg:"Non recieve a token."
+        return res.status(403).json({
+            msg:"Non recieve a token. Unahuthorized."
         })
     }
     let payload = {}
@@ -18,7 +18,7 @@ const validateJwt=async(req=request,res=response,next)=>{
         payload = jwt.decode(token, config.privatekey);
         if(payload.expiredAt < moment().unix())
         {
-            return res.status(400).json({
+            return res.status(401).json({
                 msg:"Expired Token."
             })
         }
@@ -28,7 +28,7 @@ const validateJwt=async(req=request,res=response,next)=>{
         req.user = user;
         next();
     } catch (error) {
-        return res.status(400).json({
+        return res.status(401).json({
             msg:"Invalid Token."
         })
     }

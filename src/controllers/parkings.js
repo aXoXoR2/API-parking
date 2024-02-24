@@ -23,11 +23,11 @@ const parkingGet= async(req=request,res=response)=>{
         reservations.forEach(element => {
             parkings_reservations[element.dataValues['id_parking']]=false
         });
-        res.json({
+        res.status(201).json({
             parkings_reservations
         })
     } catch (error) {
-            return res.status(500).json({
+            return res.status(401).json({
             error: error
           })
     }
@@ -38,13 +38,13 @@ const parkingPost=async(req=request,res=response)=>{
         const parking= new Parking({description})
         console.log(parking)
         await parking.save()
-        res.status(200).json({
+        res.status(201).json({
             parking
         })
 
         
     } catch (error) {
-        return res.status(500).json({
+        return res.status(401).json({
             error: error
         })
     }

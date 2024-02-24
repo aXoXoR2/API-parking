@@ -30,7 +30,7 @@ const userPost=async(req=request,res=response)=>{
         console.log(user)
         await user.save()
         console.log("ENTER OK")
-        res.status(200).json({
+        res.status(201).json({
             user
         })
     } catch (error) {

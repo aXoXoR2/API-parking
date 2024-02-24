@@ -9,7 +9,7 @@ const login=async(req,res=response)=>{
         const user= await User.findOne({where:{email}})
 
         if(!user){
-            return res.json({
+            return res.status(403).json({
                 error:'There is not user with this email.'
             })
         }
@@ -20,7 +20,7 @@ const login=async(req,res=response)=>{
         }
         const matchPassword=bcryptjs.compareSync(password,user.password_encrypted)
         if(!matchPassword){
-            return res.json({
+            return res.status(403).json({
                 error:"Password incorret."
             })
         }
